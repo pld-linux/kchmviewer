@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_with     kde		# enable KDE support
+%bcond_with	kde		# enable KDE support
 %bcond_without	arts		# build without aRts default=no
 #
 Summary:	KchmViewer is a chm (MS HTML help file format) viewer
