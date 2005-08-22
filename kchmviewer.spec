@@ -15,6 +15,7 @@ URL:		http://kchmviewer.sourceforge.net/
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
+BuildRequires:	zlib-devel
 %{?with_kde:BuildRequires:	kdelibs-devel}
 BuildRequires:	qt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
