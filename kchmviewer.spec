@@ -40,7 +40,7 @@ wsparciem dla KDE, w³±cznie z widgetami KDE i KIO/KHTML.
 
 %build
 %configure \
-	%{?with_kde:--with-kde}
+	%{?with_kde:--with-kde} \
 	%{?without_arts:--without-arts}
 %{__make}
 
