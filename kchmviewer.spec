@@ -12,6 +12,7 @@ License:	GPL v2
 Group:		Applications/Publishing
 Source0:	http://dl.sourceforge.net/kchmviewer/%{name}-%{version}.tar.gz
 # Source0-md5:	0f9595cbb13eb950261e660c168dc033
+Source1:	%{name}.png
 URL:		http://kchmviewer.sourceforge.net/
 %{?with_kde:BuildRequires:	kdelibs-devel}
 BuildRequires:	libjpeg-devel
@@ -49,6 +50,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+install -D kio-msits/kchmviewer.desktop $RPM_BUILD_ROOT%{_desktopdir}/kde/kchmviewer.desktop
+install -D %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}/kchmviewer.png
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -56,3 +60,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog
 %attr(755,root,root) %{_bindir}/*
+%{_desktopdir}/kde/*
+%{_pixmapsdir}/*
