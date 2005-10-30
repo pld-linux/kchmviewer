@@ -1,0 +1,49 @@
+--- kchmviewer-1.1/src/Makefile.am.orig	2005-06-25 11:41:10.000000000 +0200
++++ kchmviewer-1.1/src/Makefile.am	2005-10-30 20:55:08.000000000 +0100
+@@ -6,10 +6,10 @@
+ 	kchmviewwindow_qtextbrowser.cpp kchmviewwindow_khtmlpart.cpp kchmsetupdialog.ui
+ 
+ # set the include path found by configure
+-INCLUDES = $(QT_INCLUDES) -I$(CHM_INCLUDES) $(KDE_INCLUDES)
++INCLUDES = $(QT_INCLUDES) $(KDE_INCLUDES)
+ 
+ # the library search path.
+-kchmviewer_LDADD = $(CHM_LIBS) $(LIB_QT) $(LIB_KDEUI) $(LIB_KHTML)
++kchmviewer_LDADD = -lchm $(LIB_QT) $(LIB_KDEUI) $(LIB_KHTML)
+ kchmviewer_LDFLAGS = $(QT_LDFLAGS) $(KDE_LDFLAGS)
+ 
+ METASOURCES = AUTO
+--- kchmviewer-1.1/kio-msits/Makefile.am.orig	2005-06-25 11:41:09.000000000 +0200
++++ kchmviewer-1.1/kio-msits/Makefile.am	2005-10-30 20:54:43.000000000 +0100
+@@ -1,10 +1,10 @@
+ METASOURCES = AUTO
+-INCLUDES = $(QT_INCLUDES) -I$(CHM_INCLUDES) $(KDE_INCLUDES)
++INCLUDES = $(QT_INCLUDES) $(KDE_INCLUDES)
+ 
+ kde_module_LTLIBRARIES = kio_msits.la
+ 
+ kio_msits_la_SOURCES = msits.cpp
+-kio_msits_la_LIBADD = -lkio $(CHM_LIBS)
++kio_msits_la_LIBADD = -lkio -lchm
+ kio_msits_la_LDFLAGS = -module -avoid-version $(QT_LIBS) $(KDE_LDFLAGS) $(KDE_LIBS) $(KDE_PLUGIN)
+ 
+ protocol_DATA = msits.protocol
+--- kchmviewer-1.1/Makefile.am.orig	2005-10-30 09:22:55.000000000 +0100
++++ kchmviewer-1.1/Makefile.am	2005-10-30 20:55:25.000000000 +0100
+@@ -1,4 +1,4 @@
+ # don't warn about missing AUTHORS, NEWS, ChangeLog .. files
+ AUTOMAKE_OPTIONS = foreign 1.4
+ 
+-SUBDIRS = chmlib src @EXTRA_SUBDIRS@
++SUBDIRS = src @EXTRA_SUBDIRS@
+--- kchmviewer-1.1/src/xchmfile.cpp.orig	2005-06-25 18:17:24.000000000 +0200
++++ kchmviewer-1.1/src/xchmfile.cpp	2005-10-30 21:10:55.000000000 +0100
+@@ -649,7 +649,7 @@
+ size_t CHMFile::RetrieveObject(const chmUnitInfo *ui, unsigned char *buffer,
+ 							   LONGUINT64 fileOffset, LONGINT64 bufferSize)
+ {
+-	return ::chm_retrieve_object(m_chmFile, ui, buffer, fileOffset,
++	return ::chm_retrieve_object(m_chmFile, (chmUnitInfo*)ui, buffer, fileOffset,
+ 								 bufferSize);
+ }
+ 
