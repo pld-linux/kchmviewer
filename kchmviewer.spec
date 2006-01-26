@@ -14,6 +14,7 @@ Source0:	http://dl.sourceforge.net/kchmviewer/%{name}-%{version}.tar.gz
 # Source0-md5:	0bda19a63dafd5fbb69ea2e3b7f1fa75
 Source1:	%{name}.png
 Patch0:		%{name}-system-chmlib.patch
+Patch1:		%{name}-desktop.patch
 URL:		http://kchmviewer.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.4
@@ -43,6 +44,7 @@ wsparciem dla KDE, w³±cznie z widgetami KDE i KIO/KHTML.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__libtoolize}
