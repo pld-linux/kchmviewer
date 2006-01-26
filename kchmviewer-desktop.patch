@@ -11,4 +11,4 @@
  Comment=A viewer of CHM (MS-Help) files
 +Comment[pl]=Przeglądarka plików CHM (Pomoc MS)
  MimeType=application/chm
-+Categories=Office;Viewer;
++Categories=Qt;Office;Viewer;
