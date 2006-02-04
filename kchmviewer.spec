@@ -6,15 +6,14 @@
 Summary:	KchmViewer - a CHM (MS HTML help file format) viewer
 Summary(pl):	KchmViewer - przegl±darka CHM (formatu plików pomocy MS HTML)
 Name:		kchmviewer
-Version:	1.3
+Version:	2.0
 Release:	1
 License:	GPL v2
 Group:		Applications/Publishing
 Source0:	http://dl.sourceforge.net/kchmviewer/%{name}-%{version}.tar.gz
-# Source0-md5:	0bda19a63dafd5fbb69ea2e3b7f1fa75
+# Source0-md5:	94203642266aaecffdcc6c6d516f7635
 Source1:	%{name}.png
-Patch0:		%{name}-system-chmlib.patch
-Patch1:		%{name}-desktop.patch
+Patch0:		%{name}-desktop.patch
 URL:		http://kchmviewer.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.4
@@ -44,7 +43,6 @@ wsparciem dla KDE, w³±cznie z widgetami KDE i KIO/KHTML.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 %build
 %{__libtoolize}
