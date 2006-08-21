@@ -6,15 +6,15 @@
 Summary:	KchmViewer - a CHM (MS HTML help file format) viewer
 Summary(pl):	KchmViewer - przegl±darka CHM (formatu plików pomocy MS HTML)
 Name:		kchmviewer
-Version:	2.5
+Version:	2.6
 Release:	1
 License:	GPL v2
 Group:		Applications/Publishing
 Source0:	http://dl.sourceforge.net/kchmviewer/%{name}-%{version}.tar.gz
-# Source0-md5:	31aa10f89b92ec5323fef7c26b1e1eed
+# Source0-md5:	7898095c413b4262c5aff6bf5fcaf25b
 Source1:	%{name}.png
 Patch0:		%{name}-desktop.patch
-Patch1:		%{name}-gcc4.patch
+Patch1:		%{name}-i18n.patch
 URL:		http://kchmviewer.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.4

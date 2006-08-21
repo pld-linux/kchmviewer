@@ -1,0 +1,11 @@
+--- kchmviewer-2.6/src/kde-qt.h.orig	2006-08-21 18:02:06.000000000 +0200
++++ kchmviewer-2.6/src/kde-qt.h	2006-08-21 18:02:48.000000000 +0200
+@@ -59,7 +59,7 @@
+ 	#include <qmessagebox.h>
+ 	#include <qprogressdialog.h>
+ 
+-	#define i18n(A)		tr(A)
++	#define i18n(A)		QObject::tr(A)
+ 
+ #endif /* USE_KDE */
+ 
