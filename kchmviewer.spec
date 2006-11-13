@@ -59,7 +59,7 @@ wsparciem dla KDE, w³±cznie z widgetami KDE i KIO/KHTML.
 %endif
 	--%{?debug:en}%{!?debug:dis}able-debug%{?debug:=full} \
 	%{?with_kde:--with-kde} \
-	%{?without_arts:--without-arts} \
+	%{!?with_arts:--without-arts} \
 	--with-qt-libraries=%{_libdir}
 %{__make}
 
