@@ -19,7 +19,7 @@ URL:		http://kchmviewer.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1.4
 BuildRequires:	chmlib-devel >= 0.37
-%{?with_kde:BuildRequires:	kdelibs-devel}
+%{?with_kde:BuildRequires:	kdelibs-devel >= 9:3.0}
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
