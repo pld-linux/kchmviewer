@@ -4,7 +4,7 @@
 %bcond_without	arts		# build without aRts default=no
 #
 Summary:	KchmViewer - a CHM (MS HTML help file format) viewer
-Summary(pl):	KchmViewer - przegl±darka CHM (formatu plików pomocy MS HTML)
+Summary(pl.UTF-8):   KchmViewer - przeglÄ…darka CHM (formatu plikÃ³w pomocy MS HTML)
 Name:		kchmviewer
 Version:	2.7
 Release:	1
@@ -34,12 +34,12 @@ Unlike most existing CHM viewers for Unix, it uses Trolltech Qt widget
 library, and does not depend on KDE or GNOME. However, it may be
 compiled with full KDE support, including KDE widgets and KIO/KHTML.
 
-%description -l pl
-KchmViewer to przegl±darka CHM (formatu plików pomocy MS HTML)
-napisana w C++. W przeciwieñstwie do wiêkszo¶ci istniej±cych
-przegl±darek CHM dla Uniksa u¿ywa biblioteki widgetów Trolltecha Qt i
-nie zale¿y od KDE czy GNOME. Jednak mo¿e byæ skompilowana z pe³nym
-wsparciem dla KDE, w³±cznie z widgetami KDE i KIO/KHTML.
+%description -l pl.UTF-8
+KchmViewer to przeglÄ…darka CHM (formatu plikÃ³w pomocy MS HTML)
+napisana w C++. W przeciwieÅ„stwie do wiÄ™kszoÅ›ci istniejÄ…cych
+przeglÄ…darek CHM dla Uniksa uÅ¼ywa biblioteki widgetÃ³w Trolltecha Qt i
+nie zaleÅ¼y od KDE czy GNOME. Jednak moÅ¼e byÄ‡ skompilowana z peÅ‚nym
+wsparciem dla KDE, wÅ‚Ä…cznie z widgetami KDE i KIO/KHTML.
 
 %prep
 %setup -q
