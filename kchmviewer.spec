@@ -4,7 +4,7 @@
 %bcond_without	arts		# build without aRts default=no
 #
 Summary:	KchmViewer - a CHM (MS HTML help file format) viewer
-Summary(pl.UTF-8):   KchmViewer - przeglądarka CHM (formatu plików pomocy MS HTML)
+Summary(pl.UTF-8):	KchmViewer - przeglądarka CHM (formatu plików pomocy MS HTML)
 Name:		kchmviewer
 Version:	2.7
 Release:	1
