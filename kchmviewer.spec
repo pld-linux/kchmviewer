@@ -6,13 +6,12 @@
 Summary:	KchmViewer - a CHM (MS HTML help file format) viewer
 Summary(pl.UTF-8):	KchmViewer - przeglądarka CHM (formatu plików pomocy MS HTML)
 Name:		kchmviewer
-Version:	2.7
-Release:	1
+Version:	3.1
+Release:	0.1
 License:	GPL v2
 Group:		Applications/Publishing
 Source0:	http://dl.sourceforge.net/kchmviewer/%{name}-%{version}.tar.gz
-# Source0-md5:	f7bb9fb4b10f351f93d32a5ebca5e078
-Source1:	%{name}.png
+# Source0-md5:	6666e32415e0e91f963190a25d5767fb
 Patch0:		%{name}-desktop.patch
 Patch1:		%{name}-i18n.patch
 URL:		http://kchmviewer.sourceforge.net/
@@ -69,15 +68,17 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install -D kio-msits/kchmviewer.desktop $RPM_BUILD_ROOT%{_desktopdir}/kde/kchmviewer.desktop
-install -D %{SOURCE1} $RPM_BUILD_ROOT%{_pixmapsdir}/kchmviewer.png
+install -D lib/kio-msits/kchmviewer.desktop $RPM_BUILD_ROOT%{_desktopdir}/kde/kchmviewer.desktop
+install -D src/pics/cr48-app-kchmviewer.png $RPM_BUILD_ROOT%{_pixmapsdir}/kchmviewer.png
+
+%find_lang %{name} --with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc ChangeLog
+%doc ChangeLog FAQ README
 %attr(755,root,root) %{_bindir}/*
-%{_desktopdir}/kde/*
-%{_pixmapsdir}/*
+%{_desktopdir}/kde/*.desktop
+%{_pixmapsdir}/*.png
