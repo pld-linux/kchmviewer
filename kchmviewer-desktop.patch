@@ -9,7 +9,8 @@
  Exec=kchmviewer %U
  Icon=kchmviewer.png
 -Comment=
- Terminal=0
+-Terminal=0
++Terminal=false
  Name=KchmViewer
  Comment=A viewer of CHM (MS-Help) files
 +Comment[pl]=Przeglądarka plików CHM (Pomoc MS)
