@@ -71,6 +71,8 @@ rm -rf $RPM_BUILD_ROOT
 install -D lib/kio-msits/kchmviewer.desktop $RPM_BUILD_ROOT%{_desktopdir}/kde/kchmviewer.desktop
 install -D src/pics/cr48-app-kchmviewer.png $RPM_BUILD_ROOT%{_pixmapsdir}/kchmviewer.png
 
+mv -f $RPM_BUILD_ROOT%{_datadir}/locale/{du,nl}
+
 %find_lang %{name} --with-kde
 
 %clean
@@ -82,4 +84,3 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_desktopdir}/kde/*.desktop
 %{_pixmapsdir}/*.png
-%exclude /usr/share/locale/du
