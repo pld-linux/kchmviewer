@@ -7,7 +7,7 @@ Summary:	KchmViewer - a CHM (MS HTML help file format) viewer
 Summary(pl.UTF-8):	KchmViewer - przeglądarka CHM (formatu plików pomocy MS HTML)
 Name:		kchmviewer
 Version:	3.1
-Release:	0.1
+Release:	1	
 License:	GPL v2
 Group:		Applications/Publishing
 Source0:	http://dl.sourceforge.net/kchmviewer/%{name}-%{version}.tar.gz
@@ -82,3 +82,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_desktopdir}/kde/*.desktop
 %{_pixmapsdir}/*.png
+%exclude /usr/share/locale/du
