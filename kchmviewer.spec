@@ -26,15 +26,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 KchmViewer is a CHM (MS HTML help file format) viewer, written in C++.
 Unlike most existing CHM viewers for Unix, it uses Trolltech Qt widget
-library, and does not depend on KDE or GNOME. However, it may be
-compiled with full KDE support, including KDE widgets and KIO/KHTML.
+library.
 
 %description -l pl.UTF-8
 KchmViewer to przeglądarka CHM (formatu plików pomocy MS HTML)
 napisana w C++. W przeciwieństwie do większości istniejących
-przeglądarek CHM dla Uniksa używa biblioteki widgetów Trolltecha Qt i
-nie zależy od KDE czy GNOME. Jednak może być skompilowana z pełnym
-wsparciem dla KDE, włącznie z widgetami KDE i KIO/KHTML.
+przeglądarek CHM dla Uniksa używa biblioteki widgetów Trolltech Qt.
 
 %prep
 %setup -q -n build-%{version}
