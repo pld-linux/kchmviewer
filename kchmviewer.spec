@@ -12,11 +12,14 @@ Patch1:		%{name}-i18n.patch
 Patch2:		%{name}-missed_src.patch
 Patch3:		%{name}-no_msits.patch
 URL:		http://kchmviewer.sourceforge.net/
+BuildRequires:	automoc4
 BuildRequires:	chmlib-devel >= 0.37
-BuildRequires:	libjpeg-devel
-BuildRequires:	libpng-devel
+BuildRequires:	cmake
+BuildRequires:	gettext-devel
+BuildRequires:	kde4-kdelibs-devel
 BuildRequires:	libstdc++-devel
-BuildRequires:	zlib-devel
+BuildRequires:	qt4-build
+BuildRequires:	qt4-qmake
 Requires:	kio_msits
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
